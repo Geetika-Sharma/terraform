@@ -15,3 +15,11 @@ resource "random_string" "string" {
         create_before_destroy = true
     }
 }
+
+resource "random_pet" "super_pet" {
+    length = var.length
+    prefix = var.prefix
+    lifecycle {
+        prevent_destroy = true
+    }
+}
