@@ -27,6 +27,10 @@
 
 * It is **cloud-agnostic**, meaning it can manage infrastructure across AWS, Azure, GCP, Kubernetes, and many other platforms using providers.
 
+### Terraform Architecture
+<img width="1510" height="756" alt="image" src="https://github.com/user-attachments/assets/cfc4f77a-0067-430d-b6c4-266b542cbf49" />
+
+
 ### Common Patterns
 
 #### 🔹 Provisioning + Configuration Management
