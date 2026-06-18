@@ -42,16 +42,7 @@
 #### 🔹 Provisioning + Orchestration 
 **Example:** Use **Terraform** to provision a Kubernetes cluster (e.g., EKS/AKS/GKE), then use **Kubernetes** to deploy and manage containerized applications within that cluster.
 
-### State File
-<img width="1472" height="779" alt="image" src="https://github.com/user-attachments/assets/a1c75fd1-e4d7-42f8-a707-302c8064a53e" />
-
-#### Local Backend
-<img width="905" height="510" alt="image" src="https://github.com/user-attachments/assets/ea30c0df-6755-4b5c-aef4-b6c48bb92eb0" />
-
-#### Remote Backend
-<img width="1391" height="715" alt="image" src="https://github.com/user-attachments/assets/dd5f8809-7f24-4834-9f0e-5bd87c23544a" />
-<img width="1475" height="771" alt="image" src="https://github.com/user-attachments/assets/ab7d0288-45b5-46b1-a5d7-678effd56b95" />
-
+## Part 3
 ### Basic Usage Command
 <img width="536" height="460" alt="image" src="https://github.com/user-attachments/assets/f4b78c52-359d-4bb4-8d6c-2a3c8c5a6d3b" />
 
@@ -81,3 +72,61 @@ The terraform destroy command deprovisions all objects managed by a Terraform co
 While you will typically not want to destroy long-lived objects in a production environment, Terraform is sometimes used to manage ephemeral infrastructure for development purposes, in which case you can use terraform destroy to conveniently clean up all of those temporary objects once you are finished with your work.
 
 <img width="1459" height="778" alt="image" src="https://github.com/user-attachments/assets/b7057fce-efb1-4aa3-9ef4-03251796195a" />
+
+### State File
+<img width="1472" height="779" alt="image" src="https://github.com/user-attachments/assets/a1c75fd1-e4d7-42f8-a707-302c8064a53e" />
+
+#### Local Backend
+<img width="905" height="510" alt="image" src="https://github.com/user-attachments/assets/ea30c0df-6755-4b5c-aef4-b6c48bb92eb0" />
+
+#### Remote Backend
+<img width="1391" height="715" alt="image" src="https://github.com/user-attachments/assets/dd5f8809-7f24-4834-9f0e-5bd87c23544a" />
+<img width="1475" height="771" alt="image" src="https://github.com/user-attachments/assets/ab7d0288-45b5-46b1-a5d7-678effd56b95" />
+<img width="993" height="521" alt="image" src="https://github.com/user-attachments/assets/190d1ebc-13a0-4c4c-8133-86e2f8469ba8" />
+<img width="1016" height="458" alt="image" src="https://github.com/user-attachments/assets/c95b80a7-e490-4123-bb5a-6c3e4a117413" />
+
+#### Bootstrapping
+So we want to provision AWS objects with Terraform but Terraform remote Backend needs the resources; so it's a chicken and egg problem. 
+What do we do then? We bootstrap by first keeping the provider locally first and create S3 Bucket and DynamoDB
+<img width="977" height="506" alt="image" src="https://github.com/user-attachments/assets/0fc4ced4-0d80-442e-91b0-5e048c182b51" />
+<img width="1001" height="565" alt="image" src="https://github.com/user-attachments/assets/2a12370f-f38d-44f5-a279-e45fc3476153" />
+Then we perform `terraform apply` so S3 and DB are provisioned first.
+<img width="1007" height="560" alt="image" src="https://github.com/user-attachments/assets/8a00aa6c-55df-4c42-b4fc-5a44c11cbe2d" />
+So now our Terraform state file has those 2 resources
+<img width="998" height="563" alt="image" src="https://github.com/user-attachments/assets/bccbfa26-c489-4533-bd66-2298601fc39c" />
+Now we update the Terraform Backend to remote i.e. S3 and DynamoDB details:
+<img width="1007" height="564" alt="image" src="https://github.com/user-attachments/assets/df91a1f5-7426-4199-98b6-dcb2d06cd287" />
+<img width="930" height="556" alt="image" src="https://github.com/user-attachments/assets/5f70ea9f-d5c5-4667-9978-5f7bb7ba05ce" />
+<img width="1009" height="556" alt="image" src="https://github.com/user-attachments/assets/2acdef1b-cf1c-40c0-bc56-9b23ff0350ad" />
+
+## Part 4
+### Variables and Outputs
+
+#### Variable Types
+- **Input Variables**
+You can add variable blocks to your configuration to define input interface for your module. This lets users pass custom values to your module at runtime.
+
+- **Local Variables**
+Local values are similar to function-scoped variables in other programming languages. Local values assign names to expressions, letting you use the name multiple times within a module instead of repeating that expression.
+
+- **Output Variables**
+Add output blocks to your configuration to expose information about your infrastructure on the command line, in HCP Terraform, and in other Terraform configurations. The output block serves the following purposes in Terraform:
+
+  - Child modules can expose resource attributes to parent modules.
+  - Root modules can display values in CLI output.
+  - Other Terraform configurations using remote state can access root module outputs with the terraform_remote_state data source, including state sharing in HCP Terraform
+  - Pass information from a Terraform operation to an automation tool.
+ 
+<img width="1467" height="759" alt="image" src="https://github.com/user-attachments/assets/53782441-c18e-493c-bd95-aacae05dae76" />
+
+
+
+
+
+
+
+
+
+
+
+
