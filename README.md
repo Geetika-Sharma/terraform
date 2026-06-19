@@ -124,7 +124,9 @@ Add output blocks to your configuration to expose information about your infrast
 
 ## Part 5
 ### Additional Language Features
+
 <img width="984" height="527" alt="image" src="https://github.com/user-attachments/assets/bf4716ea-57fa-4734-b0d1-721f1fc27c31" />
+
 #### Terraform Template Strings
 Terraform template strings allow dynamic construction of text by embedding variables, expressions, and control structures within strings.
 
