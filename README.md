@@ -125,6 +125,62 @@ Add output blocks to your configuration to expose information about your infrast
 ## Part 5
 ### Additional Language Features
 <img width="984" height="527" alt="image" src="https://github.com/user-attachments/assets/bf4716ea-57fa-4734-b0d1-721f1fc27c31" />
+#### Terraform Template Strings
+Terraform template strings allow dynamic construction of text by embedding variables, expressions, and control structures within strings.
+
+##### Key Features
+- Interpolate variables and expressions using `${}` syntax.
+- Generate dynamic resource names, tags, and configurations.
+- Support conditional logic with `%{ if ... }` blocks.
+- Support iteration with `%{ for ... }` loops.
+- Improve reusability and reduce hardcoded values in configurations.
+- Commonly used with `templatefile()` for external template files.
+
+#### Terraform Operators
+Terraform operators are symbols used to perform calculations, comparisons, and logical evaluations within expressions.
+
+##### Key Features
+- Arithmetic operators: `+`, `-`, `*`, `/`, `%`.
+- Comparison operators: `==`, `!=`, `<`, `>`, `<=`, `>=`.
+- Logical operators: `&&`, `||`, `!`.
+- Used in conditions, variable assignments, and resource configurations.
+- Enable dynamic and conditional infrastructure definitions.
+- Commonly used with expressions and conditional statements.
+
+#### Terraform Conditionals
+Terraform conditionals enable decision-making within configurations by evaluating expressions and returning values based on specified conditions.
+
+##### Key Features
+- Use the ternary syntax: `condition ? true_value : false_value`.
+- Dynamically assign values based on environment or input variables.
+- Reduce duplication by handling multiple scenarios in a single expression.
+- Commonly used in resource arguments, locals, and outputs.
+- Improve flexibility and maintainability of infrastructure code.
+- Support environment-specific and feature-based configurations.
+
+#### Terraform For Expressions with Lists
+Terraform for expressions with lists allow transformation, filtering, and generation of new lists from existing collections.
+
+##### Key Features
+- Iterate over list elements using the `for` expression syntax.
+- Create new lists by transforming existing values.
+- Support conditional filtering with `if` clauses.
+- Reduce repetitive code when processing collections.
+- Commonly used in locals, variables, and resource arguments.
+- Improve readability and maintainability of list-based configurations.
+
+#### Terraform Splat Expressions
+Terraform splat expressions provide a concise way to access attributes from all elements in a collection of resources or objects.
+
+##### Key Features
+- Use the `[*]` syntax to extract values from multiple instances.
+- Simplify access to attributes across lists of resources.
+- Return a list containing the selected attribute values.
+- Reduce the need for explicit `for` expressions in simple cases.
+- Commonly used with resources created using `count` or collections of objects.
+- Improve readability when working with repeated resource attributes.
+
+  
 <img width="995" height="561" alt="image" src="https://github.com/user-attachments/assets/aa4dadf6-1bf4-4ae8-b33e-94668857927c" />
 <img width="991" height="542" alt="image" src="https://github.com/user-attachments/assets/b71b15b7-8a50-414a-b865-b74395646ba5" />
 <img width="997" height="544" alt="image" src="https://github.com/user-attachments/assets/e751857f-8092-4d45-8d7d-2cb8fc407f07" />
