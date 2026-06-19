@@ -105,6 +105,9 @@ Now we update the Terraform Backend to remote i.e. S3 and DynamoDB details:
 #### Variable Types
 - **Input Variables**
 You can add variable blocks to your configuration to define input interface for your module. This lets users pass custom values to your module at runtime.
+<img width="708" height="496" alt="image" src="https://github.com/user-attachments/assets/2e3813bb-75ee-43f2-82fc-4277eb0a39e4" />
+<img width="990" height="541" alt="image" src="https://github.com/user-attachments/assets/d3218d06-2d23-4804-a7be-140d0de1915c" />
+<img width="1045" height="553" alt="image" src="https://github.com/user-attachments/assets/bb3edeff-d937-42cc-a6a1-32469d606e29" />
 
 - **Local Variables**
 Local values are similar to function-scoped variables in other programming languages. Local values assign names to expressions, letting you use the name multiple times within a module instead of repeating that expression.
@@ -118,6 +121,19 @@ Add output blocks to your configuration to expose information about your infrast
   - Pass information from a Terraform operation to an automation tool.
  
 <img width="1467" height="759" alt="image" src="https://github.com/user-attachments/assets/53782441-c18e-493c-bd95-aacae05dae76" />
+
+## Part 5
+### Additional Language Features
+<img width="984" height="527" alt="image" src="https://github.com/user-attachments/assets/bf4716ea-57fa-4734-b0d1-721f1fc27c31" />
+<img width="995" height="561" alt="image" src="https://github.com/user-attachments/assets/aa4dadf6-1bf4-4ae8-b33e-94668857927c" />
+<img width="991" height="542" alt="image" src="https://github.com/user-attachments/assets/b71b15b7-8a50-414a-b865-b74395646ba5" />
+<img width="997" height="544" alt="image" src="https://github.com/user-attachments/assets/e751857f-8092-4d45-8d7d-2cb8fc407f07" />
+<img width="981" height="546" alt="image" src="https://github.com/user-attachments/assets/c938d20c-8f16-4195-a21a-fd82b054f602" />
+
+
+
+
+
 
 
 
