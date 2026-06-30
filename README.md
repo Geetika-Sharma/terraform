@@ -182,6 +182,127 @@ Terraform splat expressions provide a concise way to access attributes from all 
 - Commonly used with resources created using `count` or collections of objects.
 - Improve readability when working with repeated resource attributes.
 
+#### Terraform Dynamic Block
+Terraform dynamic blocks allow you to generate nested configuration blocks dynamically based on a collection of values.
+
+##### Key Features
+- Create repeated nested blocks without duplicating code.
+- Iterate over lists, maps, or sets using the `for_each` argument.
+- Simplify resource configurations with variable numbers of nested blocks.
+- Improve reusability by making configurations more flexible.
+- Commonly used for resources with multiple nested settings, such as security rules or disk configurations.
+- Support conditional generation of nested blocks by controlling the input collection.
+
+#### Terraform Constraints - Type and Version
+Terraform constraints define variable data types and version requirements to ensure configuration consistency, compatibility, and predictable deployments.
+
+##### Key Features
+* Define variable types using `string`, `number`, `bool`, `list`, `map`, `set`, `object`, and `tuple`.
+* Restrict the Terraform CLI version using the `required_version` argument.
+* Specify compatible provider versions with the `required_providers` block.
+* Support version constraint operators such as `=`, `!=`, `>`, `>=`, `<`, `<=`, and `~>`.
+* Prevent incompatible Terraform or provider versions from being used.
+* Improve configuration stability and consistency across environments.
+
+#### Terraform Numeric Functions
+Terraform numeric functions perform mathematical operations and numerical calculations within expressions.
+
+#### Key Features
+* Perform arithmetic and mathematical calculations on numeric values.
+* Common functions include `abs()`, `ceil()`, `floor()`, `log()`, `max()`, `min()`, `pow()`, `signum()`, and `parseint()`.
+* Support rounding, exponentiation, logarithms, and integer parsing.
+* Enable dynamic calculations for resource configurations and variables.
+* Frequently used in `locals`, variables, outputs, and resource arguments.
+* Eliminate the need for external scripts to perform numeric computations.
+
+#### Terraform String Functions
+Terraform string functions manipulate, format, and transform text values within expressions.
+
+#### Key Features
+* Modify, combine, and format string values dynamically.
+* Common functions include `chomp()`, `format()`, `formatlist()`, `indent()`, `join()`, `lower()`, `regex()`, `regexall()`, `replace()`, `split()`, `strcontains()`, `substr()`, `title()`, `trim()`, `trimprefix()`, `trimsuffix()`, `trimspace()`, and `upper()`.
+* Support string formatting, pattern matching, and text replacement.
+* Simplify resource naming, tagging, and output formatting.
+* Frequently used in variables, `locals`, outputs, and resource arguments.
+* Improve readability by reducing complex string manipulation logic.
+
+#### Terraform Collection Functions
+Terraform collection functions manipulate and transform lists, maps, sets, and other collection types within expressions.
+
+#### Key Features
+* Create, combine, filter, and transform collection values.
+* Common functions include `alltrue()`, `anytrue()`, `chunklist()`, `coalescelist()`, `compact()`, `concat()`, `contains()`, `distinct()`, `element()`, `flatten()`, `index()`, `keys()`, `length()`, `lookup()`, `matchkeys()`, `merge()`, `one()`, `range()`, `reverse()`, `setintersection()`, `setproduct()`, `setsubtract()`, `setunion()`, `slice()`, `sort()`, `sum()`, `transpose()`, `values()`, and `zipmap()`.
+* Support operations on lists, maps, sets, and tuples.
+* Simplify data transformation for variables, locals, and outputs.
+* Enable dynamic resource configuration using collection-based expressions.
+* Reduce repetitive logic when working with complex data structures.
+
+#### Terraform Encoding Functions
+Terraform encoding functions convert data between different formats for serialization, parsing, and interoperability.
+
+#### Key Features
+* Encode and decode data in common formats.
+* Common functions include `base64encode()`, `base64decode()`, `base64gzip()`, `csvdecode()`, `jsonencode()`, `jsondecode()`, `textencodebase64()`, `textdecodebase64()`, `urlencode()`, `yamlencode()`, and `yamldecode()`.
+* Simplify data exchange with APIs, templates, and external services.
+* Convert Terraform values to and from JSON, YAML, CSV, and Base64 formats.
+* Commonly used for configuration files, user data scripts, and provider arguments.
+* Eliminate manual serialization and parsing of structured data.
+
+#### Terraform Filesystem Functions
+Terraform filesystem functions read, process, and manage files and file paths within Terraform configurations.
+
+#### Key Features
+* Read file contents and process data from the local filesystem.
+* Common functions include `abspath()`, `dirname()`, `pathexpand()`, `basename()`, `file()`, `fileexists()`, `fileset()`, `filebase64()`, `filebase64sha256()`, `filebase64sha512()`, `filemd5()`, `filesha1()`, `filesha256()`, `filesha512()`, `templatefile()`, and `csvdecode()`.
+* Generate file hashes for integrity verification and change detection.
+* Render templates with dynamic values using `templatefile()`.
+* Simplify working with configuration files, scripts, and static assets.
+* Commonly used for user data, cloud-init scripts, templates, and local configuration files.
+
+#### Terraform Date and Time Functions
+Terraform date and time functions generate, format, and manipulate date and time values within Terraform configurations.
+
+#### Key Features
+* Generate and format timestamps for resources and outputs.
+* Common functions include `formatdate()`, `plantimestamp()`, `timeadd()`, and `timestamp()`.
+* Format timestamps using custom date and time patterns.
+* Perform date and time arithmetic by adding or subtracting durations.
+* Commonly used for resource metadata, expiration dates, and automation workflows.
+* Enable dynamic time-based values without external scripting.
+
+#### Terraform Hash and Crypto Functions
+Terraform hash and crypto functions generate cryptographic hashes and handle secure checksum operations for data integrity and validation.
+
+#### Key Features
+* Generate cryptographic hashes for strings and files.
+* Common functions include `base64sha256()`, `base64sha512()`, `filemd5()`, `filesha1()`, `filesha256()`, `filesha512()`, `md5()`, `sha1()`, `sha256()`, and `sha512()`.
+* Verify data integrity using consistent hashing mechanisms.
+* Detect changes in files and configuration content.
+* Support secure comparisons for immutable resources and caching.
+* Commonly used in state validation, file change detection, and security-sensitive configurations.
+
+#### Terraform IP Network Functions
+Terraform IP network functions perform calculations and transformations on IP addresses and CIDR blocks for network configuration and allocation.
+
+#### Key Features
+* Calculate and manipulate IP address ranges and CIDR blocks.
+* Common functions include `cidrhost()`, `cidrnetmask()`, `cidrsubnet()`, `cidrsubnets()`, and `cidrcontains()`.
+* Derive host IPs from a given subnet using index-based allocation.
+* Split larger CIDR blocks into smaller subnets for structured networking.
+* Validate whether an IP address belongs to a specific CIDR range.
+* Commonly used in VPC design, subnetting, and cloud networking configurations.
+
+#### Terraform Type Conversion Functions
+Terraform type conversion functions convert values between different data types to ensure compatibility in expressions and resource arguments.
+
+#### Key Features
+* Convert values between string, number, list, map, and set types.
+* Common functions include `tostring()`, `tonumber()`, `tobool()`, `tolist()`, `toset()`, and `tomap()`.
+* Ensure consistent data types across variables, locals, and outputs.
+* Enable safe manipulation of dynamic or user-provided input values.
+* Prevent type mismatch errors in Terraform configurations.
+* Commonly used in variable validation, resource arguments, and data transformations.
+
   
 <img width="995" height="561" alt="image" src="https://github.com/user-attachments/assets/aa4dadf6-1bf4-4ae8-b33e-94668857927c" />
 <img width="991" height="542" alt="image" src="https://github.com/user-attachments/assets/b71b15b7-8a50-414a-b865-b74395646ba5" />
