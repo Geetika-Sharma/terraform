@@ -207,7 +207,7 @@ Terraform constraints define variable data types and version requirements to ens
 #### Terraform Numeric Functions
 Terraform numeric functions perform mathematical operations and numerical calculations within expressions.
 
-#### Key Features
+##### Key Features
 * Perform arithmetic and mathematical calculations on numeric values.
 * Common functions include `abs()`, `ceil()`, `floor()`, `log()`, `max()`, `min()`, `pow()`, `signum()`, and `parseint()`.
 * Support rounding, exponentiation, logarithms, and integer parsing.
@@ -218,7 +218,7 @@ Terraform numeric functions perform mathematical operations and numerical calcul
 #### Terraform String Functions
 Terraform string functions manipulate, format, and transform text values within expressions.
 
-#### Key Features
+##### Key Features
 * Modify, combine, and format string values dynamically.
 * Common functions include `chomp()`, `format()`, `formatlist()`, `indent()`, `join()`, `lower()`, `regex()`, `regexall()`, `replace()`, `split()`, `strcontains()`, `substr()`, `title()`, `trim()`, `trimprefix()`, `trimsuffix()`, `trimspace()`, and `upper()`.
 * Support string formatting, pattern matching, and text replacement.
@@ -229,7 +229,7 @@ Terraform string functions manipulate, format, and transform text values within 
 #### Terraform Collection Functions
 Terraform collection functions manipulate and transform lists, maps, sets, and other collection types within expressions.
 
-#### Key Features
+##### Key Features
 * Create, combine, filter, and transform collection values.
 * Common functions include `alltrue()`, `anytrue()`, `chunklist()`, `coalescelist()`, `compact()`, `concat()`, `contains()`, `distinct()`, `element()`, `flatten()`, `index()`, `keys()`, `length()`, `lookup()`, `matchkeys()`, `merge()`, `one()`, `range()`, `reverse()`, `setintersection()`, `setproduct()`, `setsubtract()`, `setunion()`, `slice()`, `sort()`, `sum()`, `transpose()`, `values()`, and `zipmap()`.
 * Support operations on lists, maps, sets, and tuples.
@@ -240,7 +240,7 @@ Terraform collection functions manipulate and transform lists, maps, sets, and o
 #### Terraform Encoding Functions
 Terraform encoding functions convert data between different formats for serialization, parsing, and interoperability.
 
-#### Key Features
+##### Key Features
 * Encode and decode data in common formats.
 * Common functions include `base64encode()`, `base64decode()`, `base64gzip()`, `csvdecode()`, `jsonencode()`, `jsondecode()`, `textencodebase64()`, `textdecodebase64()`, `urlencode()`, `yamlencode()`, and `yamldecode()`.
 * Simplify data exchange with APIs, templates, and external services.
@@ -251,7 +251,7 @@ Terraform encoding functions convert data between different formats for serializ
 #### Terraform Filesystem Functions
 Terraform filesystem functions read, process, and manage files and file paths within Terraform configurations.
 
-#### Key Features
+##### Key Features
 * Read file contents and process data from the local filesystem.
 * Common functions include `abspath()`, `dirname()`, `pathexpand()`, `basename()`, `file()`, `fileexists()`, `fileset()`, `filebase64()`, `filebase64sha256()`, `filebase64sha512()`, `filemd5()`, `filesha1()`, `filesha256()`, `filesha512()`, `templatefile()`, and `csvdecode()`.
 * Generate file hashes for integrity verification and change detection.
@@ -262,7 +262,7 @@ Terraform filesystem functions read, process, and manage files and file paths wi
 #### Terraform Date and Time Functions
 Terraform date and time functions generate, format, and manipulate date and time values within Terraform configurations.
 
-#### Key Features
+##### Key Features
 * Generate and format timestamps for resources and outputs.
 * Common functions include `formatdate()`, `plantimestamp()`, `timeadd()`, and `timestamp()`.
 * Format timestamps using custom date and time patterns.
@@ -273,7 +273,7 @@ Terraform date and time functions generate, format, and manipulate date and time
 #### Terraform Hash and Crypto Functions
 Terraform hash and crypto functions generate cryptographic hashes and handle secure checksum operations for data integrity and validation.
 
-#### Key Features
+##### Key Features
 * Generate cryptographic hashes for strings and files.
 * Common functions include `base64sha256()`, `base64sha512()`, `filemd5()`, `filesha1()`, `filesha256()`, `filesha512()`, `md5()`, `sha1()`, `sha256()`, and `sha512()`.
 * Verify data integrity using consistent hashing mechanisms.
@@ -284,7 +284,7 @@ Terraform hash and crypto functions generate cryptographic hashes and handle sec
 #### Terraform IP Network Functions
 Terraform IP network functions perform calculations and transformations on IP addresses and CIDR blocks for network configuration and allocation.
 
-#### Key Features
+##### Key Features
 * Calculate and manipulate IP address ranges and CIDR blocks.
 * Common functions include `cidrhost()`, `cidrnetmask()`, `cidrsubnet()`, `cidrsubnets()`, and `cidrcontains()`.
 * Derive host IPs from a given subnet using index-based allocation.
@@ -295,7 +295,7 @@ Terraform IP network functions perform calculations and transformations on IP ad
 #### Terraform Type Conversion Functions
 Terraform type conversion functions convert values between different data types to ensure compatibility in expressions and resource arguments.
 
-#### Key Features
+##### Key Features
 * Convert values between string, number, list, map, and set types.
 * Common functions include `tostring()`, `tonumber()`, `tobool()`, `tolist()`, `toset()`, and `tomap()`.
 * Ensure consistent data types across variables, locals, and outputs.
@@ -303,11 +303,51 @@ Terraform type conversion functions convert values between different data types 
 * Prevent type mismatch errors in Terraform configurations.
 * Commonly used in variable validation, resource arguments, and data transformations.
 
-  
 <img width="995" height="561" alt="image" src="https://github.com/user-attachments/assets/aa4dadf6-1bf4-4ae8-b33e-94668857927c" />
 <img width="991" height="542" alt="image" src="https://github.com/user-attachments/assets/b71b15b7-8a50-414a-b865-b74395646ba5" />
 <img width="997" height="544" alt="image" src="https://github.com/user-attachments/assets/e751857f-8092-4d45-8d7d-2cb8fc407f07" />
 <img width="981" height="546" alt="image" src="https://github.com/user-attachments/assets/c938d20c-8f16-4195-a21a-fd82b054f602" />
+<img width="984" height="531" alt="image" src="https://github.com/user-attachments/assets/1b8ba872-4138-4fdc-a513-7f55041d759f" />
+
+## Part 6
+### Project Organization + Modules
+<img width="975" height="534" alt="image" src="https://github.com/user-attachments/assets/46ab4bac-d2d2-4720-aced-7c1c865e5b41" />
+
+#### Terraform Modules
+Terraform modules are reusable packages of Terraform configurations that encapsulate related resources and logic to promote consistency, reusability, and scalability.
+
+##### Key Features
+* Encapsulate multiple resources into a single reusable unit.
+* Improve code organization by separating concerns (network, compute, IAM, etc.).
+* Support input variables (`variables.tf`) for customization.
+* Expose outputs (`outputs.tf`) to pass data between modules.
+* Enable composition by calling modules inside other modules (nested modules).
+* Allow reuse from local paths, Git repositories, Terraform Registry, or remote sources.
+* Promote standardization across environments (dev, staging, prod).
+* Reduce duplication and improve maintainability in large infrastructures.
+
+<img width="948" height="529" alt="image" src="https://github.com/user-attachments/assets/7885bd9f-d36a-4c10-8f7c-e10a2bf2b4d7" />
+
+#### Terraform Types of Modules
+Terraform modules are categorized based on how they are created, stored, and reused across infrastructure environments.
+
+##### Key Features
+* **Root Module**: The default working directory where Terraform is executed; defines the primary configuration.
+* **Child Modules**: Reusable modules called from a root module or other modules to encapsulate specific functionality.
+* **Local Modules**: Stored within the same repository using a local file path for tight coupling and quick development.
+* **Remote Modules**: Stored in external sources like Git repositories, Terraform Registry, or HTTP URLs for reuse across projects.
+* **Published Modules**: Versioned and shared via the Terraform Registry for standardized and community-driven usage.
+* **Composable Modules**: Designed to be combined with other modules to build complex infrastructure systems.
+
+<img width="949" height="533" alt="image" src="https://github.com/user-attachments/assets/bec599da-8644-4ea3-b904-d3f050da6833" />
+<img width="1003" height="520" alt="image" src="https://github.com/user-attachments/assets/13371de0-e424-4ef4-b2da-8e454f00c376" />
+<img width="984" height="530" alt="image" src="https://github.com/user-attachments/assets/9d480f39-31fd-4233-abd6-f196b563261d" />
+<img width="986" height="546" alt="image" src="https://github.com/user-attachments/assets/ea140241-e8de-49b5-8875-6d666d9b186c" />
+<img width="785" height="537" alt="image" src="https://github.com/user-attachments/assets/c4c83f84-450a-4be6-be17-52db1aa87ec4" />
+
+
+
+
 
 
 
