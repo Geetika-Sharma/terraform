@@ -345,6 +345,104 @@ Terraform modules are categorized based on how they are created, stored, and reu
 <img width="986" height="546" alt="image" src="https://github.com/user-attachments/assets/ea140241-e8de-49b5-8875-6d666d9b186c" />
 <img width="785" height="537" alt="image" src="https://github.com/user-attachments/assets/c4c83f84-450a-4be6-be17-52db1aa87ec4" />
 
+## Part 7
+### Managing Multiple Environments
+<img width="987" height="543" alt="image" src="https://github.com/user-attachments/assets/f3840e5c-bc7f-4fe8-93b1-24271bd57aba" />
+<img width="986" height="526" alt="image" src="https://github.com/user-attachments/assets/4ac752a3-f4f7-4ef1-8e09-b78bc75ed42a" />
+<img width="996" height="551" alt="image" src="https://github.com/user-attachments/assets/c93e25b7-6578-4355-b77d-07f780f7fd94" />
+<img width="987" height="552" alt="image" src="https://github.com/user-attachments/assets/c4a90e7a-34cc-4b65-bd32-0b2792bff0e0" />
+<img width="992" height="555" alt="image" src="https://github.com/user-attachments/assets/32d570f2-977c-4f1d-adc5-0992a2a83927" />
+<img width="981" height="476" alt="image" src="https://github.com/user-attachments/assets/3737d6d6-367f-4b53-b5ae-7f8aac8d4af1" />
+
+#### Terraform Workspaces
+Terraform workspaces allow you to manage multiple state files using the same Terraform configuration, making it easy to deploy identical infrastructure for different environments.
+
+##### Key Features
+* Each workspace maintains its own independent Terraform state.
+* Reuse the same configuration for environments such as `dev`, `staging`, and `prod`.
+* Switch between workspaces using Terraform CLI without modifying the configuration.
+* Access the current workspace using `terraform.workspace` for environment-specific logic.
+* Ideal when infrastructure is nearly identical across environments.
+* Not a replacement for separate backends or projects when environments require different access controls or lifecycles.
+* Default workspace is named `default`; additional workspaces can be created as needed.
+
+##### Quick Commands
+```bash
+# List all workspaces
+terraform workspace list
+
+# Create a new workspace
+terraform workspace new <workspace_name>
+
+# Switch to a workspace
+terraform workspace select <workspace_name>
+
+# Show the current workspace
+terraform workspace show
+
+# Delete a workspace
+terraform workspace delete <workspace_name>
+```
+
+#### Terraform File Structure for Multiple Environments
+Instead of using workspaces, a common production approach is to maintain separate directories for each environment. Each environment has its own configuration, variables, and state while reusing shared modules.
+
+##### Key Features
+* Each environment (`dev`, `staging`, `prod`) has its own directory and independent state.
+* Reuse common infrastructure through shared modules.
+* Store environment-specific values in separate `terraform.tfvars` or variable files.
+* Isolate deployments to reduce the risk of accidentally modifying another environment.
+* Support different backends, providers, permissions, and resource configurations per environment.
+* Preferred approach for production environments with different lifecycles, security, or compliance requirements.
+
+##### Recommended Directory Structure
+```text
+terraform/
+├── modules/
+│   ├── network/
+│   ├── compute/
+│   └── storage/
+│
+├── environments/
+│   ├── dev/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── terraform.tfvars
+│   │   ├── backend.tf
+│   │   └── outputs.tf
+│   │
+│   ├── staging/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── terraform.tfvars
+│   │   ├── backend.tf
+│   │   └── outputs.tf
+│   │
+│   └── prod/
+│       ├── main.tf
+│       ├── variables.tf
+│       ├── terraform.tfvars
+│       ├── backend.tf
+│       └── outputs.tf
+```
+
+##### Workspaces vs Environment Directories
+| Workspaces                                      | Environment Directories                                          |
+| ----------------------------------------------- | ---------------------------------------------------------------- |
+| Same configuration, multiple state files        | Separate configuration and state per environment                 |
+| Best when environments are nearly identical     | Best when environments differ in size, permissions, or resources |
+| Simpler for small projects                      | Preferred for production and enterprise projects                 |
+| Shared backend configuration                    | Can use different backends for each environment                  |
+| Higher risk of deploying to the wrong workspace | Better isolation and safer deployments                           |
+
+## Part 8
+### Testing Terraform Code
+<img width="829" height="544" alt="image" src="https://github.com/user-attachments/assets/eccd9a39-40d1-4929-9f74-9d1d7b9f4ec5" />
+
+<img width="990" height="560" alt="image" src="https://github.com/user-attachments/assets/ffffe835-98e2-4e98-aac0-3a65254e5ba3" />
+
+
+
 
 
 
