@@ -462,6 +462,10 @@ terraform/
 ### CI/CD
 <img width="972" height="537" alt="image" src="https://github.com/user-attachments/assets/7ca63e47-5558-4e44-af98-56a32398b75d" />
 
+### Potential pitfalls
+<img width="946" height="532" alt="image" src="https://github.com/user-attachments/assets/d8751098-7ddc-46a3-b944-683ad1a5b5db" />
+
+
 
 
 
