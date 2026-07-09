@@ -450,6 +450,20 @@ terraform/
 <img width="815" height="573" alt="image" src="https://github.com/user-attachments/assets/1e1c4ac4-f3d6-47b6-9a49-8e81717b7611" />
 <img width="1018" height="550" alt="image" src="https://github.com/user-attachments/assets/03a8163d-af64-4c81-8402-7c1fcdea77c6" />
 
+## Part 9
+### Developer Workflow
+<img width="966" height="534" alt="image" src="https://github.com/user-attachments/assets/5828e4cc-afd2-4408-939b-a2888ecd3f29" />
+<img width="983" height="522" alt="image" src="https://github.com/user-attachments/assets/6b2d142b-6d98-4906-8f95-fa14f2ae0606" />
+
+### Additional Tools
+<img width="990" height="545" alt="image" src="https://github.com/user-attachments/assets/551878ad-8479-4b85-8494-d0bcb9cc5835" />
+<img width="972" height="537" alt="image" src="https://github.com/user-attachments/assets/39b45c91-774f-472d-9da6-5e6b746ba247" />
+
+### CI/CD
+<img width="972" height="537" alt="image" src="https://github.com/user-attachments/assets/7ca63e47-5558-4e44-af98-56a32398b75d" />
+
+
+
 
 
 
