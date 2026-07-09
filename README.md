@@ -441,6 +441,17 @@ terraform/
 
 <img width="990" height="560" alt="image" src="https://github.com/user-attachments/assets/ffffe835-98e2-4e98-aac0-3a65254e5ba3" />
 
+<img width="770" height="495" alt="image" src="https://github.com/user-attachments/assets/41d4fcb7-6cbc-4727-86ee-13cfb054564b" />
+<img width="969" height="531" alt="image" src="https://github.com/user-attachments/assets/c0167a70-396c-4b75-9d9d-952a2c4bad7b" />
+<img width="888" height="541" alt="image" src="https://github.com/user-attachments/assets/f012f0cf-e953-42bb-bade-6a947f59afe2" />
+
+## Part 8 - Demo
+<img width="963" height="551" alt="image" src="https://github.com/user-attachments/assets/df685fec-e3bf-4ce9-85ff-a448838c85b6" />
+<img width="815" height="573" alt="image" src="https://github.com/user-attachments/assets/1e1c4ac4-f3d6-47b6-9a49-8e81717b7611" />
+<img width="1018" height="550" alt="image" src="https://github.com/user-attachments/assets/03a8163d-af64-4c81-8402-7c1fcdea77c6" />
+
+
+
 
 
 
