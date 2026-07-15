@@ -465,30 +465,9 @@ terraform/
 ### Potential pitfalls
 <img width="946" height="532" alt="image" src="https://github.com/user-attachments/assets/d8751098-7ddc-46a3-b944-683ad1a5b5db" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Part 9 - Demo
+<img width="606" height="356" alt="image" src="https://github.com/user-attachments/assets/01ee6cb2-469a-43cd-be65-541fa47606ca" />
+<img width="525" height="511" alt="image" src="https://github.com/user-attachments/assets/97b50d50-255f-4201-9bcb-c1742824bca4" />
+<img width="837" height="486" alt="image" src="https://github.com/user-attachments/assets/7aebc4cd-7d5d-4ff0-8af5-d845bf57d43c" />
+<img width="955" height="505" alt="image" src="https://github.com/user-attachments/assets/3045faa8-81e4-49b2-bbab-a4325210809b" />
+<img width="864" height="444" alt="image" src="https://github.com/user-attachments/assets/4ede7150-b420-4787-ad17-dad7d69b8ba0" />
